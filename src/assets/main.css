@@ -1,13 +1,23 @@
 @import './base.css';
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  background-color: black;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
 #app {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
   font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
-
+section:not(#hero) {
+  padding: 2rem;
+}
 a,
 .green {
   text-decoration: none;
@@ -26,10 +36,37 @@ a,
     display: flex;
     place-items: center;
   }
+}
+.title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.188rem;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 800;
+}
+.heading {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+.primary-button {
+  box-shadow:
+    0 0 0.313rem palegreen,
+    0 0 1.563rem palegreen;
+  background-color: palegreen;
+  color: black;
+  padding: 0.938rem 3.438rem;
+  border-radius: 8px;
+  font-weight: bold;
+
+  &:hover {
+    box-shadow:
+      0 0 0.313rem palegreen,
+      0 0 1.563rem palegreen,
+      0 0 3.125rem palegreen,
+      0 0 6.25rem palegreen,
+      0 0 12.5rem palegreen;
   }
 }
