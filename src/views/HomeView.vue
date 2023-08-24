@@ -8,7 +8,7 @@
         email="barnard.alwyn262@gmail.com"
         linkedin="https://www.linkedin.com/in/alwyn-barnard/"
       />
-      <SkillList :skill-list="apiData.skills" />
+      <SkillList :skillList="skills" />
     </section>
 
     <section id="projects" class="section">
@@ -29,7 +29,7 @@ import Contact from '@/components/Contact.vue';
 import SkillList from '@/components/SkillList.vue';
 import ProjectSummary from '@/components/ProjectSummary.vue';
 import HeroSection from '@/components/HeroSection.vue';
-import * as apiData from '@/assets/APIData'
+import { projects} from '@/assets/APIData';
 
 export default defineComponent({
   name: 'HomeView',
@@ -37,9 +37,37 @@ export default defineComponent({
     Contact,
     SkillList,
     ProjectSummary,
-    HeroSection
+    HeroSection,
   },
+  data() {
+    return {
+      skills : [
+  'HTML',
+  'CSS',
+  'VueJS',
+  'Vuetify',
+  'JavaScript',
+  'Typescript',
+  'C# & ASP.NET',
+  'MVC',
+  'VSTO',
+  'StencilJS',
+  'Tailwind',
+  'SQL',
+  'SQL Server',
+  'Systems Analysis & Design',
+  'Xamarin',
+  'Entity Framework',
+  'REST APIs',
+  'Git',
+  'Github',
+  'Responsive Design',
+  'Terminal',
+]
+    }
+  }
 });
+
 
 </script>
 <style scoped>

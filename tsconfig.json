@@ -1,6 +1,15 @@
 {
+  "module": "esnext",
+  "resolveJsonModule": true,
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": true,
+  "isolatedModules": true,
   "files": [],
   "allowJs": true,
+  "noImplicitAny": true,
+  "noImplicitThis": true,
+  "noImplicitReturns": true,
+  "moduleResolution": "node",
   "references": [
     {
       "path": "./tsconfig.node.json"

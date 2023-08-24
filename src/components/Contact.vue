@@ -3,23 +3,29 @@
     <div class="heading">Contact Information</div>
     <div class="contact-item" v-if="cell">
       <v-icon color="primary"><phone-icon class="icon" /></v-icon>
-      <a :href="'tel:'+ cell"><span>{{ cell }}</span></a>
+      <a :href="'tel:' + cell"
+        ><span>{{ cell }}</span></a
+      >
     </div>
     <div class="contact-item" v-if="location">
       <v-icon color="primary"><map-marker-icon class="icon" /></v-icon>
       <span>{{ location }}</span>
     </div>
     <div class="contact-item" v-if="email">
-      <v-icon color="primary"><email-icon class="icon"/></v-icon>
-      <a :href="'mailto:'+ props.email">{{ email }}</a>
+      <v-icon color="primary"><email-icon class="icon" /></v-icon>
+      <a :href="'mailto:' + props.email">{{ email }}</a>
     </div>
     <div class="contact-item" v-if="linkedin">
       <v-icon color="primary"><link-icon class="icon"></link-icon></v-icon>
-      <a :href="linkedin" target="_blank"><span>{{ linkedin }}</span></a>
+      <a :href="linkedin" target="_blank"
+        ><span>{{ linkedin }}</span></a
+      >
     </div>
     <div class="contact-item" v-if="github">
       <v-icon color="primary"><link-icon class="icon"></link-icon></v-icon>
-      <a :href="github" target="_blank"><span>{{ github }}</span></a>
+      <a :href="github" target="_blank"
+        ><span>{{ github }}</span></a
+      >
     </div>
   </div>
 </template>
@@ -62,6 +68,5 @@ const props = withDefaults(
   color: palegreen;
   margin-left: 0.75rem;
   size: 36;
-  
 }
 </style>
