@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1 class="projects-heading">Projects</h1>
-    <p>Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
+    <h1 class="projects-heading heading">Projects</h1>
+    <p class="projects-subheading centered">Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
   </div>
   <br />
   <div id="project-summary-container">
-    <div>
-      <img :src="props.imageSrc" style="max-width: 100%;" />
+    <div class="projects-showcase">
+      <img :src="props.imageSrc" style="max-width: 50%;" />
     </div>
-    <div class="project-details">
-      <h3>{{ props.name }}</h3>
+    <div>
+      <h3>{{ props.name }}</h3> <br />
       <p>{{ props.description }}</p>
       <button
         class="primary-button projects-button"
@@ -35,18 +35,22 @@ h3 {
 #project-summary-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 .projects-button {
   margin: 3.125rem auto;
-  display: block;
-  align-items: center;
-}
-.project-details {
-  display: block;
 }
 .projects-heading {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.projects-subheading {
+  margin-bottom: 50px;
+}
+.projects-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

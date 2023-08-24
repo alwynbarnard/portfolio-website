@@ -3,40 +3,33 @@
     <div class="heading">Contact Information</div>
     <div class="contact-item" v-if="cell">
       <v-icon color="primary"><phone-icon class="icon" /></v-icon>
-      <span>{{ props.cell }}</span>
+      <a :href="'tel:'+ cell"><span>{{ cell }}</span></a>
     </div>
     <div class="contact-item" v-if="location">
       <v-icon color="primary"><map-marker-icon class="icon" /></v-icon>
-      <span>{{ props.location }}</span>
+      <span>{{ location }}</span>
     </div>
     <div class="contact-item" v-if="email">
-      <v-icon color="primary"><email-icon class="icon" /></v-icon>
-      <span>{{ props.email }}</span>
+      <v-icon color="primary"><email-icon class="icon"/></v-icon>
+      <a :href="'mailto:'+ props.email">{{ email }}</a>
     </div>
     <div class="contact-item" v-if="linkedin">
-      <v-icon color="primary"
-        ><link-icon class="icon"
-          ><a :href="props.linkedin">LinkedIn</a></link-icon
-        ></v-icon
-      >
-      <span>{{ props.linkedin }}</span>
+      <v-icon color="primary"><link-icon class="icon"></link-icon></v-icon>
+      <a :href="linkedin" target="_blank"><span>{{ linkedin }}</span></a>
     </div>
     <div class="contact-item" v-if="github">
-      <v-icon color="primary"
-        ><link-icon class="icon"
-          ><a :href="props.github">Github</a></link-icon
-        ></v-icon
-      >
-      <span>{{ props.github }}</span>
+      <v-icon color="primary"><link-icon class="icon"></link-icon></v-icon>
+      <a :href="github" target="_blank"><span>{{ github }}</span></a>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import PhoneIcon from '../../node_modules/vue-material-design-icons/Phone.vue';
 import MapMarkerIcon from '../../node_modules/vue-material-design-icons/MapMarker.vue';
 import EmailIcon from '../../node_modules/vue-material-design-icons/Email.vue';
 import LinkIcon from '../../node_modules/vue-material-design-icons/Link.vue';
+
 const props = withDefaults(
   defineProps<{
     cell: string;
@@ -69,5 +62,6 @@ const props = withDefaults(
   color: palegreen;
   margin-left: 0.75rem;
   size: 36;
+  
 }
 </style>

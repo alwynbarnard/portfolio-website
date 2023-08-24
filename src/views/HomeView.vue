@@ -8,14 +8,15 @@
         email="barnard.alwyn262@gmail.com"
         linkedin="https://www.linkedin.com/in/alwyn-barnard/"
       />
-      <SkillList :skill-list="skills" />
+      <SkillList :skill-list="apiData.skills" />
     </section>
+
     <section id="projects" class="section">
       <div>
         <ProjectSummary
           name="Betway Front End Redesign"
           description="The Betway Banking Front End redesign project focuses on optimizing customer banking interactions. It involves modernizing the interface, streamlining transactions, and prioritizing security. This comprehensive initiative aims to enhance user experience, responsiveness, and data analytics capabilities."
-          imageSrc="../src/assets/Images/Betway.png"
+          imageSrc="../src/assets/Images/Betway-2.png"
         />
       </div>
     </section>
@@ -28,36 +29,10 @@ import Contact from '@/components/Contact.vue';
 import SkillList from '@/components/SkillList.vue';
 import ProjectSummary from '@/components/ProjectSummary.vue';
 import HeroSection from '@/components/HeroSection.vue';
+import * as apiData from '@/assets/APIData'
 
 export default defineComponent({
   name: 'HomeView',
-  data() {
-    return {
-      skills: [
-        'HTML',
-        'CSS',
-        'Vuetify',
-        'JavaScript',
-        'Typescript',
-        'VueJS',
-        'C# & ASP.NET',
-        'MVC',
-        'VSTO',
-        'StencilJS',
-        'Tailwind',
-        'SQL',
-        'SQL Server',
-        'Systems Analysis & Design',
-        'Xamarin',
-        'Entity Framework',
-        'REST APIs',
-        'Git',
-        'Github',
-        'Responsive Design',
-        'Terminal',
-      ],
-    };
-  },
   components: {
     Contact,
     SkillList,
@@ -65,6 +40,7 @@ export default defineComponent({
     HeroSection
   },
 });
+
 </script>
 <style scoped>
 * {

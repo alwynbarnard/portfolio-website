@@ -70,3 +70,9 @@ a,
       0 0 12.5rem palegreen;
   }
 }
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
