@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="heading">My Skills</div>
+    <div class="heading">{{ heading }}</div>
     <div v-for="(skill, index) in props.skillList" :key="index" class="skills">
       <div class="skill">{{ skill }}</div>
     </div>
@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
+  heading: string;
   skillList: string[];
 }>();
 </script>

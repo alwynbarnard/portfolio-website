@@ -1,44 +1,98 @@
 <template>
+  <h1 class="heading project-heading">{{ project.projectName }}</h1>
+  <hr />
   <div>
-    <h1>{{ props.heading }}</h1>
-    <p>{{ props.description }}</p>
-    <a :href="props.projectLink"><button>Project Link</button></a>
+    <section id="project-overview">
+      <h3 class="heading projects-overview">Project Overview</h3>
+      <div class="project-overview-container">
+        <div v-for="(overviews, index) in project.projectDetail" :key="index">
+          {{ overviews }} <br /><br />
+        </div>
+        <button class="primary-button">
+          <a :href="project.projectLink">See live</a>
+        </button>
+      </div>
+    </section>
 
-    <div v-for="(img, index) in props.imageSrcs" :key="index">
-      <img :src="img" alt="Project Images" />
-    </div>
+    <v-carousel hide-delimiters>
+      <v-carousel-item
+        v-for="(item, i) in project.projectImageSrcs"
+        :key="i"
+        :src="item"
+        cycle
+        interval="5000"
+      ></v-carousel-item>
+    </v-carousel>
 
-    <div>
-      <h3>Project Overview</h3>
-      <p>{{ props.projectOverview }}</p>
-    </div>
-
-    <h3>Tools Used</h3>
-    <SkillList :skill-list="props.tools" />
-
-    <a :href="props.projectLink"><button>Project Link</button></a>
+    <section id="tools">
+      <SkillList heading="Tools used:" :skill-list="project.projectTools" />
+    </section>
   </div>
 </template>
 <script setup lang="ts">
 import SkillList from '@/components/SkillList.vue';
+import { projects, type ProjectContainer } from '@/assets/APIData';
+import { useRoute } from 'vue-router';
+import { ref } from 'vue';
 
-// Components
-const props = withDefaults(
-  defineProps<{
-    heading: string;
-    description: string;
-    projectOverview: string;
-    projectLink: string;
-    tools: string[];
-    imageSrcs: string[];
-  }>(),
-  {
-    heading: 'Betway Front End Redesign',
-    description:
-      "The redesign and redevelopment of the Betway Banking Front End is a strategic initiative aimed at enhancing the user experience and efficiency of the banking processes for Betway's customers. The project focuses on modernizing the existing banking interface, streamlining transactional workflows, and improving overall usability while maintaining security and compliance standards. The project involves a comprehensive overhaul of the user interface (UI) and user experience (UX) design, backed by robust backend development to ensure a seamless and secure financial interaction platform.",
-    projectOverview:
-      '<h2>Goals and Key Deliverables:</h2><ol><li><h3>Enhanced Experience:</h3><p>Develop an intuitive, user-centric UI to simplify navigation and enhance engagement.</p></li><li><h3>Efficiency and Security:</h3><p>Streamline transactions, reducing processing time, and implementing robust security measures.</p></li><li><h3>Responsive Design and Integration:</h3><p>Create a consistent cross-device experience and seamlessly integrate with backend systems.</p></li><li><h3>Personalization and Insights:</h3><p>Integrate personalized features based on user history and gather valuable behavioral insights.</p></li><li><h3>Thorough Testing and Documentation:</h3><p>Ensure functionality, performance, and security through rigorous testing and provide detailed documentation.</p></li><li><h3>Training and Refinement:</h3><p>Conduct training sessions for teams and iterate based on user feedback.</p></li></ol>',
-  }
-);
+const route = useRoute();
+const projectId = ref(route.params.projectId);
+
+const filteredProjectList = projects.filter((x) => {
+  return x.projectId == projectId.value;
+})[0];
+
+const project: ProjectContainer = {
+  projectId: filteredProjectList.projectId,
+  projectName: filteredProjectList.projectName,
+  projectDetail: filteredProjectList.projectDetail,
+  projectImageSrcs: filteredProjectList.projectImageSrcs,
+  projectLink: filteredProjectList.projectLink,
+  projectSynopsis: filteredProjectList.projectSynopsis,
+  projectTools: filteredProjectList.projectTools,
+};
 </script>
-<style></style>
+<style scoped>
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-heading {
+  margin: 50px 10px;
+  color: palegreen;
+}
+.ProjectView {
+  color: aliceblue;
+  padding: 0.625rem 1.25rem;
+}
+.project-synopsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+#Project-intro,
+#project-showcases,
+#project-overview,
+#tools {
+  margin-bottom: 3.125rem;
+}
+.project-overview-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#project-showcases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+button a {
+  color: black;
+}
+.v-carousel {
+  color: black;
+}
+</style>

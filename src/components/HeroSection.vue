@@ -33,7 +33,7 @@
   margin: 0;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../assets/Images/pexels-hero-2.jpg');
+    url('../assets/Images/pexels-hero-3.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,6 +43,6 @@
   padding: 1rem;
 }
 .spaced-around {
-  margin: 10px;
+  margin: 0.625rem;
 }
 </style>

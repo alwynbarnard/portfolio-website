@@ -1,23 +1,15 @@
 <template>
-  <div>
-    <h1 class="projects-heading heading">Projects</h1>
-    <p class="projects-subheading centered">
-      Here you will find some of the personal and clients projects that I
-      created with each project containing its own case study
-    </p>
-  </div>
-  <br />
   <div id="project-summary-container">
     <div class="projects-showcase">
       <img :src="props.imageSrc" style="max-width: 50%" />
     </div>
     <div>
-      <h3>{{ props.name }}</h3>
+      <h3 class="Project-name">{{ props.name }}</h3>
       <br />
       <p>{{ props.description }}</p>
       <button
         class="primary-button projects-button"
-        onclick="document.location='/project'"
+        @click="goToProjects(id)"
       >
         Projects
       </button>
@@ -26,14 +18,23 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
 const props = defineProps<{
+  id: string;
   name: string;
   description: string;
   imageSrc: string;
 }>();
+
+const router = useRouter();
+
+const goToProjects = (projectId:string) => {
+  router.push({ name: 'Projects', params: { projectId } });
+};
 </script>
 <style scoped>
-h3 {
+.Project-name {
   font-weight: bolder;
 }
 #project-summary-container {
@@ -44,17 +45,11 @@ h3 {
 .projects-button {
   margin: 3.125rem auto;
 }
-.projects-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.projects-subheading {
-  margin-bottom: 50px;
-}
+
 .projects-showcase {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
 }
 </style>

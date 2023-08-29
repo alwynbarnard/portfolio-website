@@ -8,17 +8,29 @@
         email="barnard.alwyn262@gmail.com"
         linkedin="https://www.linkedin.com/in/alwyn-barnard/"
       />
-      <SkillList :skillList="skills" />
+      <SkillList heading="My Skills" :skillList="ListOfSKills" />
     </section>
 
     <section id="projects" class="section">
       <div>
+        <h1 class="projects-heading heading">Projects</h1>
+        <p class="projects-subheading centered">
+          Here you will find some of the personal and clients projects that I
+          created with each project containing its own case study
+        </p>
+      </div>
+      <br />
+      <div v-for="(proj, index) in projectList" :key="index">
         <ProjectSummary
-          name="Betway Front End Redesign"
-          description="The Betway Banking Front End redesign project focuses on optimizing customer banking interactions. It involves modernizing the interface, streamlining transactions, and prioritizing security. This comprehensive initiative aims to enhance user experience, responsiveness, and data analytics capabilities."
-          imageSrc="../src/assets/Images/Betway-2.png"
+          :id="proj.projectId"
+          :name="proj.projectName"
+          :description="proj.projectSynopsis"
+          :imageSrc="proj.projectImageSrcs[0]"
         />
       </div>
+    </section>
+    <section id="workHistory">
+      <WorkHistory />
     </section>
   </div>
 </template>
@@ -29,7 +41,8 @@ import Contact from '@/components/Contact.vue';
 import SkillList from '@/components/SkillList.vue';
 import ProjectSummary from '@/components/ProjectSummary.vue';
 import HeroSection from '@/components/HeroSection.vue';
-import { projects} from '@/assets/APIData';
+import WorkHistory from '@/components/WorkHistory.vue';
+import { projects, skillsList, type ProjectContainer } from '@/assets/APIData';
 
 export default defineComponent({
   name: 'HomeView',
@@ -38,44 +51,32 @@ export default defineComponent({
     SkillList,
     ProjectSummary,
     HeroSection,
+    WorkHistory,
   },
   data() {
     return {
-      skills : [
-  'HTML',
-  'CSS',
-  'VueJS',
-  'Vuetify',
-  'JavaScript',
-  'Typescript',
-  'C# & ASP.NET',
-  'MVC',
-  'VSTO',
-  'StencilJS',
-  'Tailwind',
-  'SQL',
-  'SQL Server',
-  'Systems Analysis & Design',
-  'Xamarin',
-  'Entity Framework',
-  'REST APIs',
-  'Git',
-  'Github',
-  'Responsive Design',
-  'Terminal',
-]
-    }
-  }
+      ListOfSKills: skillsList,
+      projectList: this.getProjectList(),
+    };
+  },
+  methods: {
+    getProjectList(): ProjectContainer[] {
+      return projects;
+    },
+    getProject(index: number) {
+      return this.projectList[index];
+    },
+  },
 });
-
-
 </script>
 <style scoped>
-* {
+.home-view-container {
   color: aliceblue;
 }
-section {
-  margin: 3.125rem 0.125rem;
+#about,
+#projects,
+#workHistory {
+  margin: 3.125rem 0.625rem;
 }
 #about {
   display: grid;
@@ -85,5 +86,14 @@ section {
 .project-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.projects-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-subheading {
+  margin-bottom: 3.125rem;
 }
 </style>
