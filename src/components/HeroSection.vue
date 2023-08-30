@@ -3,13 +3,16 @@
     <div class="hero-inner">
       <h1 class="title">Hey, I'm Alwyn Barnard</h1>
       <h3 class="padded">
-        An accomplished front-end developer with a comprehensive knowledge of a
-        wide range of front-end and back-end languages, responsive frameworks,
-        databases, and best coding practices.
+        I'm a passionate and innovative Intermediate Software Developer with a
+        knack for crafting exceptional web experiences and software solutions.
+        With a strong foundation in VueJS, Vuetify, NuxtJS, and an array of
+        other technologies, I bring a fresh perspective to every project I
+        tackle. My expertise spans web development, database management, UI/UX
+        design, and more.
       </h3>
       <button
         class="primary-button spaced-around"
-        onclick="window.location.href='#about"
+        onclick="window.location.href='about"
       >
         Contact Me
       </button>

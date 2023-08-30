@@ -79,3 +79,22 @@ h2 {
 h3 {
   font-size: 1.375rem;
 }
+
+/* Large and Extra Large screens (1025px and above) */
+
+
+/* Medium screens (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  
+}
+
+/* Small screens (481px - 768px) */
+@media screen and (max-width: 768px) {
+  
+}
+
+/* Extra small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+  
+}
+

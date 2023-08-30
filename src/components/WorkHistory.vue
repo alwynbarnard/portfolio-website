@@ -3,7 +3,7 @@
     <h1 class="experience-heading heading">Experience</h1>
     <v-timeline align="start" line-color="var(--primary-text-color)">
       <v-timeline-item
-        v-for="(work, i) in workHistoryData"
+        v-for="(work, i) in WorkHistoryData"
         :key="i"
         size="small"
         line-color="var(--primary-text-color)"
@@ -12,12 +12,19 @@
       >
         <template v-slot:opposite>
           <div>
-            <div class="role">{{ work.position }}</div> <br />
+            <div class="role">{{ work.position }}</div>
+            <br />
             <div>
               {{ work.startDate }} - {{ work.endDate }} <br />
               Location: {{ work.location.city }} {{ work.location.country }}
             </div>
-            <img :src="generateImageSource(work.location.country)" :alt="'Flag of ' + work.location" :title="work.location.country" width="25" class="flag-image"/>
+            <img
+              :src="generateImageSource(work.location.country)"
+              :alt="'Flag of ' + work.location"
+              :title="work.location.country"
+              width="25"
+              class="flag-image"
+            />
           </div>
         </template>
         <div>
@@ -34,11 +41,13 @@
 </template>
 
 <script setup lang="ts">
-import { type workHistoryCompanies, workHistoryData } from '@/assets/APIData';
+import { WorkHistoryData } from '@/assets/APIData';
 
 function generateImageSource(name: string): string {
   return (
-    '../src/assets/Icons/flag-' + name.toLowerCase().replace(/\s+/g, '-') + '.png'
+    '../src/assets/Icons/flag-' +
+    name.toLowerCase().replace(/\s+/g, '-') +
+    '.png'
   );
 }
 </script>

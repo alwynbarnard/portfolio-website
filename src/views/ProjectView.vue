@@ -31,14 +31,14 @@
 </template>
 <script setup lang="ts">
 import SkillList from '@/components/SkillList.vue';
-import { projects, type ProjectContainer } from '@/assets/APIData';
+import { Projects, type ProjectContainer } from '@/assets/APIData';
 import { useRoute } from 'vue-router';
 import { ref } from 'vue';
 
 const route = useRoute();
 const projectId = ref(route.params.projectId);
 
-const filteredProjectList = projects.filter((x) => {
+const filteredProjectList = Projects.filter((x) => {
   return x.projectId == projectId.value;
 })[0];
 

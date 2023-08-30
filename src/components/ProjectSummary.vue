@@ -7,10 +7,7 @@
       <h3 class="Project-name">{{ props.name }}</h3>
       <br />
       <p>{{ props.description }}</p>
-      <button
-        class="primary-button projects-button"
-        @click="goToProjects(id)"
-      >
+      <button class="primary-button projects-button" @click="goToProjects(id)">
         Projects
       </button>
     </div>
@@ -29,7 +26,7 @@ const props = defineProps<{
 
 const router = useRouter();
 
-const goToProjects = (projectId:string) => {
+const goToProjects = (projectId: string) => {
   router.push({ name: 'Projects', params: { projectId } });
 };
 </script>
