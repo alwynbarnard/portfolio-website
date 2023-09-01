@@ -17,6 +17,13 @@ const router = createRouter({
       props: true,
     },
   ],
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 });
+      }, 0);
+    });
+  },
 });
 
 export default router;

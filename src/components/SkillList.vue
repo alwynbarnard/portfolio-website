@@ -15,6 +15,7 @@ const props = defineProps<{
 </script>
 
 <style scoped>
+
 .skills {
   display: inline-grid;
   & .skill {
@@ -28,6 +29,13 @@ const props = defineProps<{
     box-shadow:
       0 0 0.313rem palegreen,
       0 0 1.563rem palegreen;
+  }
+}
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .skills .skill {
+    padding: 0.8rem 0.8rem !important;
+    font-size: 0.8rem;
   }
 }
 </style>

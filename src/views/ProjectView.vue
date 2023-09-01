@@ -8,9 +8,9 @@
         <div v-for="(overviews, index) in project.projectDetail" :key="index">
           {{ overviews }} <br /><br />
         </div>
-        <button class="primary-button">
-          <a :href="project.projectLink">See live</a>
-        </button>
+        <a :href="project.projectLink">
+          <button class="primary-button">See live</button>
+        </a>
       </div>
     </section>
 
@@ -59,7 +59,7 @@ const project: ProjectContainer = {
   justify-content: center;
 }
 .project-heading {
-  margin: 50px 10px;
+  margin: 3.125rem 0.625rem;
   color: palegreen;
 }
 .ProjectView {

@@ -33,7 +33,7 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --section-gap: 160px;
+  --section-gap: 10rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,7 +64,7 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -80,21 +80,4 @@ h3 {
   font-size: 1.375rem;
 }
 
-/* Large and Extra Large screens (1025px and above) */
-
-
-/* Medium screens (769px - 1024px) */
-@media screen and (max-width: 1024px) {
-  
-}
-
-/* Small screens (481px - 768px) */
-@media screen and (max-width: 768px) {
-  
-}
-
-/* Extra small screens (up to 480px) */
-@media screen and (max-width: 480px) {
-  
-}
 

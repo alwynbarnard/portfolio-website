@@ -15,7 +15,7 @@ export const ContactDetails: Contact = {
   Location: 'Pretoria, South Africa',
   Email: 'barnard.alwyn262@gmail.com',
   Linkedin: 'https://www.linkedin.com/in/alwyn-barnard',
-  Github: 'https://www.github.com/',
+  Github: 'https://github.com/alwynbarnard',
 };
 export interface ProjectContainer {
   projectId: string;
@@ -125,7 +125,7 @@ export const SkillsList: string[] = [
   'MVC',
   'VSTO',
   'StencilJS',
-  'Tailwind',
+  'TailwindCSS',
   'SQL',
   'SQL Server',
   'Systems Analysis & Design',
@@ -133,12 +133,23 @@ export const SkillsList: string[] = [
   'Entity Framework',
   'REST APIs',
   'Git',
-  'Github',
   'Responsive Design',
   'Terminal',
 ];
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
+  {
+    position: 'Intermediate Front End Developer',
+    companyName: 'The Builder Studios - Eli5',
+    location: {
+      city: 'Amsterdam',
+      country: 'Netherlands',
+    },
+    startDate: 'Aug 2023',
+    endDate: 'Current',
+    responsibilities:
+      'As an Intermediate Front-End Developer at Eli5 B.V. trading as The Builder Studios, I played a pivotal role in crafting seamless and captivating user experiences for a range of digital projects. Collaborating closely with the design and back-end teams, I translated design concepts into interactive interfaces that met the highest standards of performance and aesthetics. My time at Eli5 B.V. trading as The Builder Studios empowered me to contribute to the digital landscape, driving innovation and excellence in front-end development. This experience further honed my skills in crafting compelling user interfaces and collaborating effectively in dynamic teams.',
+  },
   {
     position: 'Intermediate Front End Developer',
     companyName: 'Raging River t/a Betway',

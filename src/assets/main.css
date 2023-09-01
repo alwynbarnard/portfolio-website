@@ -13,6 +13,7 @@
   font-family: 'Source Sans 3', sans-serif;
   background-color: black;
 }
+
 h1,
 h2,
 h3,
@@ -20,16 +21,67 @@ h4,
 h5 {
   font-weight: bold;
 }
+
 #app {
   font-weight: normal;
   margin: 0;
   padding: 0;
 }
+
 section:not(#hero) {
   padding: 2rem;
 }
-a,
-.green {
+
+.heading {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.188rem;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 800;
+}
+/* Medium screens (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  section:not(#hero) {
+    padding: 1rem;
+  }
+}
+
+/* Small screens (481px - 768px) */
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  body {
+    font-size: 0.875rem;
+  }
+  .projects-showcase {
+    margin: 0;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+a {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
@@ -47,22 +99,10 @@ a,
     place-items: center;
   }
 }
+
 .v-application {
   background-color: black;
   color: snow;
-}
-.title {
-  font-size: 6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.188rem;
-  text-align: center;
-  color: whitesmoke;
-  font-weight: 800;
-}
-.heading {
-  font-weight: 700;
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
 }
 
 .primary-button {
@@ -72,9 +112,12 @@ a,
   background-color: palegreen;
   color: black;
   padding: 0.938rem 3.438rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: bold;
-
+  & a {
+    color: black;
+    font-weight: bold;
+  }
   &:hover {
     box-shadow:
       0 0 0.313rem palegreen,

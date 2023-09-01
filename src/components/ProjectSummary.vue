@@ -1,14 +1,14 @@
 <template>
   <div id="project-summary-container">
     <div class="projects-showcase">
-      <img :src="props.imageSrc" style="max-width: 50%" />
+      <img :src="props.imageSrc" />
     </div>
     <div>
       <h3 class="Project-name">{{ props.name }}</h3>
       <br />
       <p>{{ props.description }}</p>
       <button class="primary-button projects-button" @click="goToProjects(id)">
-        Projects
+        View Project
       </button>
     </div>
   </div>
@@ -31,6 +31,7 @@ const goToProjects = (projectId: string) => {
 };
 </script>
 <style scoped>
+
 .Project-name {
   font-weight: bolder;
 }
@@ -41,6 +42,9 @@ const goToProjects = (projectId: string) => {
 }
 .projects-button {
   margin: 3.125rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects-showcase {
@@ -48,5 +52,29 @@ const goToProjects = (projectId: string) => {
   align-items: center;
   justify-content: center;
   margin: 1rem;
+
+  & img {
+    max-width: 50%;
+  }
+}
+/* Medium screens*/
+@media screen and (max-width: 1024px) {
+  .projects-showcase {
+    margin: 0;
+    & img {
+      max-width: 60%;
+    }
+  }
+}
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  #project-summary-container {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: auto;
+  }
+  .Project-name {
+    padding-top: 1rem;
+  }
 }
 </style>

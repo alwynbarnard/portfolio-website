@@ -33,16 +33,21 @@
     <section id="workHistory">
       <WorkHistory />
     </section>
+
+    <footer>
+      <FooterSection />
+    </footer>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Contact from '@/components/Contact.vue';
+import Contact from '@/components/ContactInfo.vue';
 import SkillList from '@/components/SkillList.vue';
 import ProjectSummary from '@/components/ProjectSummary.vue';
 import HeroSection from '@/components/HeroSection.vue';
 import WorkHistory from '@/components/WorkHistory.vue';
+import FooterSection from '@/components/FooterSection.vue';
 import {
   ContactDetails,
   Projects,
@@ -58,6 +63,7 @@ export default defineComponent({
     ProjectSummary,
     HeroSection,
     WorkHistory,
+    FooterSection,
   },
   data() {
     return {
@@ -89,12 +95,10 @@ export default defineComponent({
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 .project-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 .projects-heading {
   display: flex;
   justify-content: center;
@@ -102,5 +106,23 @@ export default defineComponent({
 }
 .projects-subheading {
   margin-bottom: 3.125rem;
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  #about {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    grid-template-columns: none;
+  }
+  .projects-subheading {
+    margin-bottom: 1rem;
+  }
+  #about,
+  #projects,
+  #workHistory {
+    margin: 1rem 0.625rem;
+  }
 }
 </style>

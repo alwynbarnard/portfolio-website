@@ -13,7 +13,6 @@
         <template v-slot:opposite>
           <div>
             <div class="role">{{ work.position }}</div>
-            <br />
             <div>
               {{ work.startDate }} - {{ work.endDate }} <br />
               Location: {{ work.location.city }} {{ work.location.country }}

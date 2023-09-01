@@ -10,12 +10,9 @@
         tackle. My expertise spans web development, database management, UI/UX
         design, and more.
       </h3>
-      <button
-        class="primary-button spaced-around"
-        onclick="window.location.href='about"
+      <a href="#Contact"
+        ><button class="primary-button spaced-around">Contact Me</button></a
       >
-        Contact Me
-      </button>
     </div>
   </section>
 </template>
@@ -47,5 +44,28 @@
 }
 .spaced-around {
   margin: 0.625rem;
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  #hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/Images/pexels-hero-portrait.jpg');
+  }
+  .title {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
 }
 </style>
