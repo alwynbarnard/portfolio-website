@@ -148,7 +148,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
     startDate: 'Aug 2023',
     endDate: 'Current',
     responsibilities:
-      'As an Intermediate Front-End Developer at Eli5 B.V. trading as The Builder Studios, I played a pivotal role in crafting seamless and captivating user experiences for a range of digital projects. Collaborating closely with the design and back-end teams, I translated design concepts into interactive interfaces that met the highest standards of performance and aesthetics. My time at Eli5 B.V. trading as The Builder Studios empowered me to contribute to the digital landscape, driving innovation and excellence in front-end development. This experience further honed my skills in crafting compelling user interfaces and collaborating effectively in dynamic teams.',
+      'I collaborated closely with the design and back-end teams, to translate design concepts into interactive interfaces that met the highest standards of performance and aesthetics. My time at Eli5 empowered me to contribute to the digital landscape, driving innovation and excellence in front-end development. This experience further honed my skills in crafting compelling user interfaces and collaborating effectively in dynamic teams.',
   },
   {
     position: 'Intermediate Front End Developer',
