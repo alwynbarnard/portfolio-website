@@ -15,7 +15,6 @@ const props = defineProps<{
 </script>
 
 <style scoped>
-
 .skills {
   display: inline-grid;
   & .skill {

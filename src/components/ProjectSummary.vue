@@ -31,7 +31,6 @@ const goToProjects = (projectId: string) => {
 };
 </script>
 <style scoped>
-
 .Project-name {
   font-weight: bolder;
 }

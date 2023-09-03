@@ -115,8 +115,8 @@ function getLocationLink(location: string): string {
 }
 .flag-container {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  margin: 0.125rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  margin: 0.125rem 5.625rem 0.125rem 0.625rem;
 }
 
 /* Extra small screens */
@@ -125,6 +125,15 @@ function getLocationLink(location: string): string {
     display: grid;
     grid-template-rows: auto;
     margin: 0.625rem 0rem;
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .flag-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0.125rem 1rem 0.125rem 0.625rem;
   }
 }
 </style>

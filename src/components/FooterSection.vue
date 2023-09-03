@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">Handcrafter by Alwyn Barnard &copy; 2023</div>
+  <div class="footer">Handcrafted by Alwyn Barnard &copy; 2023</div>
 </template>
 
 <style scoped>
