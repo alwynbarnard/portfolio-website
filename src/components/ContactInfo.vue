@@ -115,7 +115,7 @@ function getLocationLink(location: string): string {
 }
 .flag-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   margin: 0.125rem 5.625rem 0.125rem 0.625rem;
 }
 

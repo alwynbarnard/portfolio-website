@@ -87,7 +87,7 @@ const project: ProjectContainer = {
 }
 #project-showcases {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
 }
 button a {
   color: black;
