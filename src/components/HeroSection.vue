@@ -20,10 +20,10 @@
 </template>
 
 <script setup lang="ts">
-function handleLinkClick(event: { preventDefault: () => void; }) {
+function handleLinkClick(event: { preventDefault: () => void }) {
   event.preventDefault();
   scrollToSection();
-};
+}
 function scrollToSection() {
   const targetElement = document.getElementById('Contact');
 
