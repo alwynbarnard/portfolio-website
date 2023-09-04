@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "alwyncodes",
     "public": "dist",
     "ignore": [
       "firebase.json",

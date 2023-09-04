@@ -50,11 +50,11 @@ export const Projects: ProjectContainer[] = [
     ],
     projectLink: 'https:www.betway.co.za',
     projectImageSrcs: [
-      '../src/assets/Images/Betway-1.png',
-      '../src/assets/Images/Betway-2.png',
-      '../src/assets/Images/Betway-3.png',
-      '../src/assets/Images/Betway-4.png',
-      '../src/assets/Images/Betway-5.png',
+      '../../Images/Betway-1.png',
+      '../../Images/Betway-2.png',
+      '../../Images/Betway-3.png',
+      '../../Images/Betway-4.png',
+      '../../Images/Betway-5.png',
     ],
     projectTools: [
       'HTML',
@@ -90,10 +90,10 @@ export const Projects: ProjectContainer[] = [
     ],
     projectLink: 'www.betway.co.za',
     projectImageSrcs: [
-      '../src/assets/Images/Reverse Withdrawal Showcase 1.png',
-      '../src/assets/Images/Reverse Withdrawal Showcase 2.png',
-      '../src/assets/Images/Reverse Withdrawal Showcase 3.png',
-      '../src/assets/Images/Reverse Withdrawal Showcase 4.png',
+      '../../Images/Reverse Withdrawal Showcase 1.png',
+      '../../Images/Reverse Withdrawal Showcase 2.png',
+      '../../Images/Reverse Withdrawal Showcase 3.png',
+      '../../Images/Reverse Withdrawal Showcase 4.png',
     ],
     projectTools: [
       'HTML',

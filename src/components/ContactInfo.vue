@@ -81,11 +81,7 @@ const props = withDefaults(
 );
 
 function generateImageSource(name: string): string {
-  return (
-    '../src/assets/Icons/flag-' +
-    name.toLowerCase().replace(/\s+/g, '-') +
-    '.png'
-  );
+  return '../../Icons/flag-' + name.toLowerCase().replace(/\s+/g, '-') + '.png';
 }
 function getLocationLink(location: string): string {
   return 'http://maps.google.com/?q=' + location.replace(/ /g, '+');

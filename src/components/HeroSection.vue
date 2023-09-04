@@ -33,7 +33,7 @@
   margin: 0;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../assets/Images/pexels-hero-3.jpg');
+    url('../../Images/pexels-hero-3.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@
 @media screen and (max-width: 480px) {
   #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('../assets/Images/pexels-hero-portrait.jpg');
+      url('../../Images/pexels-hero-portrait.jpg');
   }
   .title {
     font-size: 3rem;
