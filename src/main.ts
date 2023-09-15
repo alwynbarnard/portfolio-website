@@ -14,6 +14,15 @@ import {
 import '@mdi/font/css/materialdesignicons.css';
 import './assets/main.css';
 
+// Hotjar heatmap section Begin
+import Hotjar from '@hotjar/browser';
+
+const siteId = 3655467;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+// Hotjar heatmap section End
+
 loadFonts();
 library.add(faLinkedin, faGithub, faLinkedinIn, faGithubAlt);
 
