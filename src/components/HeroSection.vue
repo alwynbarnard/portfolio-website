@@ -10,27 +10,20 @@
         tackle. My expertise spans web development, database management, UI/UX
         design, and more.
       </h3>
-      <a href="#Contact" @click.prevent="handleLinkClick"
-        ><button class="primary-button spaced-around" @click="scrollToSection">
-          Contact Me
-        </button></a
+      <a
+        :href="
+          'mailto:' +
+          ContactDetails.Email +
+          '?subject=Contact Request from Portfolio Site'
+        "
+        ><button class="primary-button spaced-around">Contact Me</button></a
       >
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-function handleLinkClick(event: { preventDefault: () => void }) {
-  event.preventDefault();
-  scrollToSection();
-}
-function scrollToSection() {
-  const targetElement = document.getElementById('Contact');
-
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  }
-}
+import { ContactDetails } from '@/assets/APIData';
 </script>
 
 <style scoped>

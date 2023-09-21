@@ -5,7 +5,10 @@
       <div class="contact-item" v-if="cell">
         <v-icon class="icon">mdi-phone</v-icon>
         <a :href="'tel:' + cell">
-          <span class="contact-item-value">{{ cell }}</span>
+          <span class="contact-item-value"
+            >{{ cell }}
+            <v-icon class="icon openNewIcon">mdi-open-in-new</v-icon></span
+          >
         </a>
       </div>
       <div class="contact-item" v-if="location">
@@ -13,13 +16,17 @@
         <span class="contact-item-value">
           <a target="_blank" :href="getLocationLink(location)">
             {{ location }}
+            <v-icon class="icon openNewIcon">mdi-open-in-new</v-icon>
           </a>
         </span>
       </div>
       <div class="contact-item" v-if="email">
         <v-icon class="icon">mdi-email</v-icon>
         <a :href="'mailto:' + props.email">
-          <span class="contact-item-value">{{ email }}</span>
+          <span class="contact-item-value"
+            >{{ email
+            }}<v-icon class="icon openNewIcon">mdi-open-in-new</v-icon></span
+          >
         </a>
       </div>
       <div class="contact-item" v-if="linkedin">
@@ -30,7 +37,10 @@
           style="color: palegreen"
         />
         <a :href="linkedin" target="_blank">
-          <span class="contact-item-value">{{ linkedin }}</span>
+          <span class="contact-item-value"
+            >{{ linkedin
+            }}<v-icon class="icon openNewIcon">mdi-open-in-new</v-icon></span
+          >
         </a>
       </div>
       <div class="contact-item" v-if="github">
@@ -41,7 +51,10 @@
           style="color: #98fb98"
         />
         <a :href="github" target="_blank">
-          <span class="contact-item-value">{{ github }}</span>
+          <span class="contact-item-value"
+            >{{ github
+            }}<v-icon class="icon openNewIcon">mdi-open-in-new</v-icon></span
+          >
         </a>
       </div>
       <section id="country-flags">
@@ -105,7 +118,9 @@ function getLocationLink(location: string): string {
   margin-left: 0.75rem;
   size: 2.25rem;
 }
-
+.openNewIcon {
+  font-size: 1rem;
+}
 #country-flags {
   padding: 2rem 0;
 }
