@@ -117,6 +117,9 @@ export const Projects: ProjectContainer[] = [
 export const SkillsList: string[] = [
   'HTML',
   'CSS',
+  'ReactJS',
+  'Redux',
+  'JSX',
   'VueJS',
   'Vuetify',
   'JavaScript',
