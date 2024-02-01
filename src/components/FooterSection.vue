@@ -1,5 +1,7 @@
 <template>
-  <div class="footer">Handcrafted by Alwyn Barnard &copy; {{ new Date().getFullYear() }}</div>
+  <div class="footer">
+    Handcrafted by Alwyn Barnard &copy; {{ new Date().getFullYear() }}
+  </div>
 </template>
 
 <style scoped>

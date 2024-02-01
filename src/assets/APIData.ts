@@ -49,7 +49,7 @@ export const Projects: ProjectContainer[] = [
       '../../Images/Kanban-UI-Login.png',
       '../../Images/Kanban-UI-Main.png',
       '../../Images/Kanban-UI-Task.png',
-      '../../Images/Kanban-UI-Task-StateChange.png'
+      '../../Images/Kanban-UI-Task-StateChange.png',
     ],
     projectTools: [
       'HTML',
