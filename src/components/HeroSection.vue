@@ -5,7 +5,7 @@
       <h3 class="padded">
         I'm a passionate and innovative Intermediate Software Developer with a
         knack for crafting exceptional web experiences and software solutions.
-        With a strong foundation in VueJS, Vuetify, NuxtJS, and an array of
+        With a strong foundation in ReactJS, VueJS, Redux, NuxtJS, and an array of
         other technologies, I bring a fresh perspective to every project I
         tackle. My expertise spans web development, database management, UI/UX
         design, and more.
