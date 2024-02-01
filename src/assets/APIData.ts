@@ -1,7 +1,3 @@
-/*
-  This file will be replaced by API calls and VueX/Pinia state management once a license is aquired by the hosting company
-*/
-
 export interface Contact {
   Phone: string;
   Location: string;
@@ -40,6 +36,35 @@ export interface WorkHistoryCompanies {
 }
 
 export const Projects: ProjectContainer[] = [
+  {
+    projectId: 'KBUI144',
+    projectName: 'Kanban UI',
+    projectSynopsis:
+      "Building an affordable desktop admin tool with a Kanban board. Key features: user authentication, admin ticket management, basic user task assignment. Visualize tasks across 'To-Do','In Progress', and 'Done' columns. Enhancing productivity with secure, cost-effective task tracking.",
+    projectDetail: [
+      "The objective of this project is to develop a cost-effective administrative tool equipped with a Kanban board feature to efficiently track tasks in the form of tickets. This tool will serve as a cornerstone application for streamlining task management within the company. The key functionalities include user authorization, ticket creation and editing privileges for admin users, and ticket reading and self-assignment capabilities for basic users. Additionally, the Kanban board will consist of three columns: 'To-Do', 'In Progress', and 'Done', providing a visual representation of task progress.",
+    ],
+    projectLink: 'https://github.com/alwynbarnard/Kanban-UI',
+    projectImageSrcs: [
+      '../../Images/Kanban-UI-Login.png',
+      '../../Images/Kanban-UI-Main.png',
+      '../../Images/Kanban-UI-Task.png',
+      '../../Images/Kanban-UI-Task-StateChange.png'
+    ],
+    projectTools: [
+      'HTML',
+      'CSS',
+      'ReactJS',
+      'React Router',
+      'React Scripts',
+      'ContextAPI',
+      'Typescript',
+      'Ant Design',
+      'Sweet Alert 2',
+      'Font Awesome',
+      'Systems Analysis & Design',
+    ],
+  },
   {
     projectId: 'BW201',
     projectName: 'Betway Front End Redesign',
