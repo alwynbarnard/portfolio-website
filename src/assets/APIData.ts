@@ -140,32 +140,52 @@ export const Projects: ProjectContainer[] = [
 ];
 
 export const SkillsList: string[] = [
+  'ReactJS',
+  'Javascript & JSX',
+  'Typescript',
+  'Redux',
+  'VueJS',
+  'Python',
   'HTML',
   'CSS',
-  'ReactJS',
-  'Redux',
-  'JSX',
-  'VueJS',
-  'Vuetify',
-  'JavaScript',
-  'Typescript',
-  'C# & ASP.NET',
-  'MVC',
-  'VSTO',
-  'StencilJS',
-  'TailwindCSS',
+  'C# ASP.NET',
+  'C# MVC',
+  'REST APIs',
+  'XAML & YAML',
   'SQL',
   'SQL Server',
-  'Systems Analysis & Design',
-  'Xamarin',
-  'Entity Framework',
-  'REST APIs',
-  'Git',
-  'Responsive Design',
-  'Terminal',
+  'SSMS',
+  'SSRS',
+  'SSIS',
+  'Power BI',
+  'PowerApps',
 ];
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
+  {
+    position: 'Intermediate Front End Developer',
+    companyName: 'SprintHive',
+    location: {
+      city: 'Johannesburg',
+      country: 'South Africa',
+    },
+    startDate: 'May 2024',
+    endDate: 'Present',
+    responsibilities:
+      'At SprintHive I worked closely with senior product owners to deliver improvements to their current ecosystem with the goal of optimizing code and delivering products that are modern and easy to use. I also took ownership of a project to simplify customer onboarding and identity verification on mobile devices in low-income, network-restricted areas. During my time with SprintHive, I helped cut costs and relieve user strain that was having negative effects on profits. I was actively involved in upskilling and teaching business analysts about product offerings and improvements that these projects were responsible for. I took an active role in knowledge-sharing and innovation, and I was instrumental in managing products with little to no oversight',
+  },
+  {
+    position: 'Intermediate Front End Developer',
+    companyName: 'Various - Freelance',
+    location: {
+      city: 'Pretoria',
+      country: 'South Africa',
+    },
+    startDate: 'Sep 2023',
+    endDate: 'Apr 2024',
+    responsibilities:
+      'As a front-end developer, I collaborated with clients to design and implement responsive, userfriendly web applications. Utilizing technologies such as HTML, CSS, and JavaScript, I transformed wireframes and prototypes into functional interfaces, ensuring optimal performance across devices. I focused on enhancing user experience and accessibility while adhering to best practices in code quality and version control.',
+  },
   {
     position: 'Intermediate Front End Developer',
     companyName: 'The Builder Studios - Eli5',
@@ -173,8 +193,8 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       city: 'Amsterdam',
       country: 'Netherlands',
     },
-    startDate: 'Aug 2023',
-    endDate: 'Current',
+    startDate: 'Jul 2023',
+    endDate: 'Aug 2023',
     responsibilities:
       'I collaborated closely with the design and back-end teams, to translate design concepts into interactive interfaces that met the highest standards of performance and aesthetics. My time at Eli5 empowered me to contribute to the digital landscape, driving innovation and excellence in front-end development. This experience further honed my skills in crafting compelling user interfaces and collaborating effectively in dynamic teams.',
   },
@@ -186,7 +206,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       country: 'South Africa',
     },
     startDate: 'June 2021',
-    endDate: 'July 2023',
+    endDate: 'June 2023',
     responsibilities:
       'Developed new features for Betway’s mobile and Desktop sites using VueJS with Vuetify and Nuxt and provided support and improvements to the current site using MVC, WebAPI and Bootstrap. Streamlined the process of tracking tasks using Azure DevOps and automated the process of alerting potential burnout. Spearheaded team interaction through daily check-ins and task updates. Managed events such as team building and testing events. Spearheaded code documentation and collaboration project which includes designs, wireframes, development documentation and feedback from a central location. Provided technical support and training for colleagues from various teams as well as new hires. Developed quality assurance protocols for various projects. Optimized existing systems to better meet client needs. Streamlined the maintenance and updating of existing and new systems.',
   },
@@ -201,18 +221,6 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
     endDate: 'May 2021',
     responsibilities:
       'Developed various mobile and web applications for the company’s clientele and provided support to clients on solutions provided. Deployed the software tools, processes, and metrics. Automated the process of alerting developers of change requests and error logging using MS Power Automate. Originated the development of an application to make custom reporting easier for users than the current Microsoft SQL Server Reporting Services solution, using C# for processing, MS SQL Server for storage, and WebAPI services to generate the data used by the App.',
-  },
-  {
-    position: 'Academic Assistant for Systems Analysis and Design Department',
-    companyName: 'North West University Potchefstroom Campus',
-    location: {
-      city: 'Potchefstroom',
-      country: 'South Africa',
-    },
-    startDate: 'Jul 2018',
-    endDate: 'Dec 2019',
-    responsibilities:
-      'I provided comprehensive support to lecturers and students in systems analysis and design, aiding in advanced programming language instruction, student assessment, and administrative tasks. Offering guidance in Information Technology matters, I nurtured innovative project concepts and contributed to curriculum design, including cost analysis for training and equipment.',
   },
 ];
 
