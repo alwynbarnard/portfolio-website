@@ -148,6 +148,9 @@ export const SkillsList: string[] = [
   'Python',
   'HTML',
   'CSS',
+  'Power BI',
+  'PowerApps',
+  'Azure DevOps',
   'C# ASP.NET',
   'C# MVC',
   'REST APIs',
@@ -157,8 +160,6 @@ export const SkillsList: string[] = [
   'SSMS',
   'SSRS',
   'SSIS',
-  'Power BI',
-  'PowerApps',
 ];
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
