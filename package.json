@@ -1,6 +1,6 @@
 {
   "name": "portfolio-site",
-  "version": "24.10.19",
+  "version": "25.01.08",
   "private": true,
   "scripts": {
     "serve": "vite preview",
