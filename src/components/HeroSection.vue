@@ -7,7 +7,7 @@
         crafting exceptional webexperiences and software solutions. With a
         strong foundation in React, Javascript, PowerBI, Python,and an array of
         other technologies, I bring a fresh perspective to every project I
-        tackle. My expertisespans business intelligence development, data
+        tackle. My expertise spans business intelligence development, data
         analysis, web development, database management,UI/UX design, and more.
       </h3>
       <a
