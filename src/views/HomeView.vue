@@ -4,7 +4,6 @@
 
     <section id="about" class="section">
       <Contact
-        :cell="contactDetails.Phone"
         :location="contactDetails.Location"
         :email="contactDetails.Email"
         :linkedin="contactDetails.Linkedin"
@@ -20,14 +19,44 @@
         created with each project containing its own case study
       </p>
       <br />
-      <div v-for="(proj, index) in projectList" :key="index">
-        <ProjectSummary
-          :id="proj.projectId"
-          :name="proj.projectName"
-          :description="proj.projectSynopsis"
-          :imageSrc="proj.projectImageSrcs[0] ?? ''"
-        />
-      </div>
+      <v-card class="project-card">
+        <v-tabs v-model="currentTab">
+          <v-tab value="bi">BI & Data Projects</v-tab>
+          <v-tab value="web">Web Development Projects</v-tab>
+        </v-tabs>
+
+        <v-window v-model="currentTab">
+          <v-window-item value="bi">
+            <v-container>
+              <v-row>
+                <ProjectSummary
+                  v-for="project in biProjects"
+                  :key="project.projectId"
+                  :id="project.projectId"
+                  :name="project.projectName"
+                  :description="project.projectSynopsis"
+                  :imageSrc="project.projectImageSrcs[0] ?? ''"
+                />
+              </v-row>
+            </v-container>
+          </v-window-item>
+
+          <v-window-item value="web">
+            <v-container>
+              <v-row>
+                <ProjectSummary
+                  v-for="project in webProjects"
+                  :key="project.projectId"
+                  :id="project.projectId"
+                  :name="project.projectName"
+                  :description="project.projectSynopsis"
+                  :imageSrc="project.projectImageSrcs[0] ?? ''"
+                />
+              </v-row>
+            </v-container>
+          </v-window-item>
+        </v-window>
+      </v-card>
     </section>
 
     <section id="workHistory">
@@ -40,8 +69,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 import Contact from '@/components/ContactInfo.vue';
 import SkillList from '@/components/SkillList.vue';
 import ProjectSummary from '@/components/ProjectSummary.vue';
@@ -55,33 +84,20 @@ import {
   type ProjectContainer,
 } from '@/assets/APIData';
 
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    Contact,
-    SkillList,
-    ProjectSummary,
-    HeroSection,
-    WorkHistory,
-    FooterSection,
-  },
-  data() {
-    return {
-      ListOfSKills: SkillsList,
-      projectList: this.getProjectList(),
-      contactDetails: ContactDetails,
-    };
-  },
-  methods: {
-    getProjectList(): ProjectContainer[] {
-      return Projects;
-    },
-    getProject(index: number) {
-      return this.projectList[index];
-    },
-  },
-});
+const currentTab = ref('bi');
+const projectList = Projects;
+const ListOfSKills = SkillsList;
+const contactDetails = ContactDetails;
+
+const biProjects = computed(() =>
+  projectList.filter((project) => !project.projectType.includes('FE'))
+);
+
+const webProjects = computed(() =>
+  projectList.filter((project) => project.projectType.includes('FE'))
+);
 </script>
+
 <style scoped>
 .home-view-container {
   color: aliceblue;
@@ -98,6 +114,10 @@ export default defineComponent({
 .project-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.project-card {
+  background-color: inherit;
+  color: inherit;
 }
 .projects-heading {
   display: flex;

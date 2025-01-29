@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="work-history">
     <h1 class="experience-heading heading">Experience</h1>
     <v-timeline align="start" line-color="var(--primary-text-color)">
       <v-timeline-item
@@ -15,15 +15,8 @@
             <div class="role">{{ work.position }}</div>
             <div>
               {{ work.startDate }} - {{ work.endDate }} <br />
-              Location: {{ work.location.city }} {{ work.location.country }}
+              {{ work.location.city }}, {{ work.location.country }}
             </div>
-            <img
-              :src="generateImageSource(work.location.country)"
-              :alt="'Flag of ' + work.location"
-              :title="work.location.country"
-              width="25"
-              class="flag-image"
-            />
           </div>
         </template>
         <div>
@@ -41,13 +34,12 @@
 
 <script setup lang="ts">
 import { WorkHistoryData } from '@/assets/APIData';
-
-function generateImageSource(name: string): string {
-  return '../../Icons/flag-' + name.toLowerCase().replace(/\s+/g, '-') + '.png';
-}
 </script>
 
 <style>
+.work-history {
+  padding: 1rem 3rem;
+}
 .v-timeline-divider__inner-dot {
   box-shadow: var(--primary-button-boxshadow);
 }

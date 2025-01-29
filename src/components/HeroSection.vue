@@ -3,12 +3,12 @@
     <div class="hero-inner">
       <h1 class="title">Hey, I'm Alwyn Barnard</h1>
       <h3 class="padded">
-        I'm a passionate and innovative Intermediate Software Developer with a
-        knack for crafting exceptional web experiences and software solutions.
-        With a strong foundation in React, Javascript, VueJS, and an array of
+        I'm a passionate and innovative Analyst Developer with a knack for
+        crafting exceptional webexperiences and software solutions. With a
+        strong foundation in React, Javascript, PowerBI, Python,and an array of
         other technologies, I bring a fresh perspective to every project I
-        tackle. My expertise spans web development, database management, UI/UX
-        design, and more.
+        tackle. My expertisespans business intelligence development, data
+        analysis, web development, database management,UI/UX design, and more.
       </h3>
       <a
         :href="
@@ -40,11 +40,14 @@ import { ContactDetails } from '@/assets/APIData';
   margin: 0;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../public/Images/pexels-hero-3.jpg');
+    url('../../Images/pexels-hero-4.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.hero-inner {
+  padding: 1rem 3rem;
 }
 .padded {
   padding: 1rem;
@@ -66,7 +69,7 @@ import { ContactDetails } from '@/assets/APIData';
 @media screen and (max-width: 480px) {
   #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('../../public/Images/pexels-hero-portrait.jpg');
+      url('../../Images/pexels-hero-portrait-1.jpg');
   }
   .title {
     font-size: 3rem;

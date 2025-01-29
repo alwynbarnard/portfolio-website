@@ -53,7 +53,8 @@ const goToProjects = (projectId: string) => {
   margin: 1rem;
 
   & img {
-    max-width: 50%;
+    max-width: 40%;
+    max-height: 40%;
   }
 }
 /* Medium screens*/
@@ -61,7 +62,8 @@ const goToProjects = (projectId: string) => {
   .projects-showcase {
     margin: 0;
     & img {
-      max-width: 60%;
+      max-width: 50%;
+      max-height: 50%;
     }
   }
 }

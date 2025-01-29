@@ -2,15 +2,6 @@
   <div>
     <div class="heading" id="Contact">Contact Information</div>
     <div class="contact-card">
-      <div class="contact-item" v-if="cell">
-        <v-icon class="icon">mdi-phone</v-icon>
-        <a :href="'tel:' + cell">
-          <span class="contact-item-value"
-            >{{ cell }}
-            <v-icon class="icon openNewIcon">mdi-open-in-new</v-icon></span
-          >
-        </a>
-      </div>
       <div class="contact-item" v-if="location">
         <v-icon class="icon">mdi-map-marker</v-icon>
         <span class="contact-item-value">
@@ -57,30 +48,15 @@
           >
         </a>
       </div>
-      <section id="country-flags">
-        <div class="heading">Countries I can work in</div>
-        <div class="flag-container">
-          <img
-            v-for="(country, index) in WorkableCountries"
-            :key="index"
-            :src="generateImageSource(country)"
-            :alt="'Flag of ' + country"
-            :title="country"
-            width="25"
-          />
-        </div>
-      </section>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { FontAwesomeIcon } from '../../node_modules/@fortawesome/vue-fontawesome';
-import { WorkableCountries } from '@/assets/APIData';
 
 const props = withDefaults(
   defineProps<{
-    cell: string;
     location: string;
     email: string;
     linkedin?: string;
@@ -93,9 +69,6 @@ const props = withDefaults(
   }
 );
 
-function generateImageSource(name: string): string {
-  return '../../Icons/flag-' + name.toLowerCase().replace(/\s+/g, '-') + '.png';
-}
 function getLocationLink(location: string): string {
   return 'http://maps.google.com/?q=' + location.replace(/ /g, '+');
 }

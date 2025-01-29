@@ -1,5 +1,4 @@
 export interface Contact {
-  Phone: string;
   Location: string;
   Email: string;
   Linkedin: string;
@@ -7,7 +6,6 @@ export interface Contact {
 }
 
 export const ContactDetails: Contact = {
-  Phone: '+27 82 783 0934',
   Location: 'Pretoria, South Africa',
   Email: 'barnard.alwyn262@gmail.com',
   Linkedin: 'https://www.linkedin.com/in/alwyn-barnard',
@@ -15,6 +13,7 @@ export const ContactDetails: Contact = {
 };
 export interface ProjectContainer {
   projectId: string;
+  projectType: string;
   projectName: string;
   projectSynopsis: string;
   projectDetail: string[];
@@ -37,7 +36,62 @@ export interface WorkHistoryCompanies {
 
 export const Projects: ProjectContainer[] = [
   {
+    projectId: 'BI691',
+    projectType: 'BI',
+    projectName: 'LEGO Set Analysis Dashboard',
+    projectSynopsis:
+      'Using Python and Power BI, I conducted a comprehensive analysis of LEGO set data to uncover market trends and product patterns. The project involved cleaning and analyzing historical LEGO set information to derive actionable insights.',
+    projectDetail: [
+      'Key Components: Data cleaning and preprocessing using Python (pandas) to handle missing values, standardize formats, and merge multiple datasets. Creation of interactive dashboards in Power BI to visualize key metrics and trends. Analysis of price points, piece counts, and theme popularity over time. Identification of seasonal release patterns and market segment targeting',
+    ],
+    projectLink: 'https://github.com/alwynbarnard/Lego-Set-Analysis',
+    projectImageSrcs: [
+      '../../Images/Lego-Set-Analysis-1.png',
+      '../../Images/Lego-Set-Analysis-2.png',
+    ],
+    projectTools: [
+      'Python',
+      'PowerBI',
+      'ETL',
+      'Data Cleaning',
+      'Data Analysis',
+      'BI Development',
+      'Pandas',
+      'Numpy',
+      'Systems Analysis & Design',
+    ],
+  },
+  {
+    projectId: 'BI884',
+    projectType: 'BI',
+    projectName:
+      'New York City Restaurant Health Code Violation Analysis Dashboard',
+    projectSynopsis:
+      'Using Python and Power BI, I conducted a data-driven investigation of New York City`s restaurant health inspection data to identify patterns in violations and assess food safety compliance across the city`s diverse dining landscape in all bouroughs.',
+    projectDetail: [
+      'Key Components: Cleaned and preprocessed extensive health inspection records using Python, addressing inconsistencies and standardizing violation codes. Developed interactive Power BI dashboards to visualize violation patterns and geographic distributions. Analyzed temporal trends in violation frequencies and severity levels. Mapped correlation between restaurant characteristics and inspection outcomes',
+    ],
+    projectLink:
+      'https://github.com/alwynbarnard/NYC-Restaurant-Health-Code-Violations-Analysis',
+    projectImageSrcs: [
+      '../../Images/NYC-Restaurant-Violation-Analysis-1.png',
+      '../../Images/NYC-Restaurant-Violation-Analysis-2.png',
+    ],
+    projectTools: [
+      'Python',
+      'PowerBI',
+      'ETL',
+      'Data Cleaning',
+      'Data Analysis',
+      'BI Development',
+      'Pandas',
+      'Numpy',
+      'Systems Analysis & Design',
+    ],
+  },
+  {
     projectId: 'KBUI144',
+    projectType: 'FE',
     projectName: 'Kanban UI',
     projectSynopsis:
       "Building an affordable desktop admin tool with a Kanban board. Key features: user authentication, admin ticket management, basic user task assignment. Visualize tasks across 'To-Do','In Progress', and 'Done' columns. Enhancing productivity with secure, cost-effective task tracking.",
@@ -46,9 +100,9 @@ export const Projects: ProjectContainer[] = [
     ],
     projectLink: 'https://github.com/alwynbarnard/Kanban-UI',
     projectImageSrcs: [
+      '../../Images/Kanban-UI-Task.png',
       '../../Images/Kanban-UI-Login.png',
       '../../Images/Kanban-UI-Main.png',
-      '../../Images/Kanban-UI-Task.png',
       '../../Images/Kanban-UI-Task-StateChange.png',
     ],
     projectTools: [
@@ -67,14 +121,16 @@ export const Projects: ProjectContainer[] = [
   },
   {
     projectId: 'BW201',
+    projectType: 'FE',
     projectName: 'Betway Front End Redesign',
     projectSynopsis:
       "The redesign and redevelopment of the Betway Banking Front End is a strategic initiative aimed at enhancing the user experience and efficiency of the banking processes for Betway's customers. The project focuses on modernizing the existing banking interface, streamlining transactional workflows, and improving overall usability while maintaining security and compliance standards. The project involves a comprehensive overhaul of the user interface (UI) and user experience (UX) design, backed by robust backend development to ensure a seamless and secure financial interaction platform.",
     projectDetail: [
       "The project aims to achieve an enhanced user experience through the development of an intuitive, user-centric UI, resulting in simplified navigation and increased engagement. By streamlining transactions and implementing strong security measures, the project also focuses on enhancing efficiency and security. This will be complemented by the creation of a responsive design that ensures a consistent experience across various devices and seamless integration with backend systems. Furthermore, the project seeks to integrate personalized features based on user history, enabling the gathering of valuable behavioral insights. To ensure the highest quality, the initiative includes rigorous testing to guarantee functionality, performance, and security, accompanied by comprehensive documentation. The project's holistic approach encompasses team training sessions and iterative refinement based on user feedback, aiming for continuous improvement.",
     ],
-    projectLink: 'https:www.betway.co.za',
+    projectLink: 'https://github.com/alwynbarnard',
     projectImageSrcs: [
+      '../../Images/Betway-0.png',
       '../../Images/Betway-1.png',
       '../../Images/Betway-2.png',
       '../../Images/Betway-3.png',
@@ -100,6 +156,7 @@ export const Projects: ProjectContainer[] = [
   },
   {
     projectId: 'RW108',
+    projectType: 'FE',
     projectName:
       'Reverse Withdrawal Feature and Transaction Tracker Front End for Betway',
     projectSynopsis:
@@ -113,8 +170,9 @@ export const Projects: ProjectContainer[] = [
 
       "Real-time updates within the transaction tracker are guaranteed to provide users with prompt information about their account activities. Additionally, clear communication channels are established to ensure users are well-informed about reversible withdrawal options, updates on withdrawal processing, and comprehensive account transaction notifications. Through this multifaceted approach, the Reverse Withdrawal Feature and Transaction Tracker project not only enhances user experience but also contributes to Betway's competitive edge within the market.",
     ],
-    projectLink: 'www.betway.co.za',
+    projectLink: 'https://github.com/alwynbarnard',
     projectImageSrcs: [
+      '../../Images/Reverse Withdrawal Showcase 0.png',
       '../../Images/Reverse Withdrawal Showcase 1.png',
       '../../Images/Reverse Withdrawal Showcase 2.png',
       '../../Images/Reverse Withdrawal Showcase 3.png',
@@ -140,26 +198,26 @@ export const Projects: ProjectContainer[] = [
 ];
 
 export const SkillsList: string[] = [
-  'ReactJS',
-  'Javascript & JSX',
-  'Typescript',
-  'Redux',
-  'VueJS',
+  'PowerBI',
   'Python',
-  'HTML',
-  'CSS',
-  'Power BI',
-  'PowerApps',
+  'Power Apps',
   'Azure DevOps',
-  'C# ASP.NET',
-  'C# MVC',
-  'REST APIs',
-  'XAML & YAML',
   'SQL',
   'SQL Server',
   'SSMS',
   'SSRS',
   'SSIS',
+  'ReactJS',
+  'VueJS',
+  'SEO & Optimization',
+  'Webpack & Babel',
+  'Redux',
+  'Javascript & JSX',
+  'Typescript',
+  'C# MVC',
+  'Git & Bitbucket',
+  'Rest APIs',
+  'XAML & YAML',
 ];
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
@@ -173,10 +231,10 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
     startDate: 'May 2024',
     endDate: 'Present',
     responsibilities:
-      'At SprintHive I worked closely with senior product owners to deliver improvements to their current ecosystem with the goal of optimizing code and delivering products that are modern and easy to use. I also took ownership of a project to simplify customer onboarding and identity verification on mobile devices in low-income, network-restricted areas. During my time with SprintHive, I helped cut costs and relieve user strain that was having negative effects on profits. I was actively involved in upskilling and teaching business analysts about product offerings and improvements that these projects were responsible for. I took an active role in knowledge-sharing and innovation, and I was instrumental in managing products with little to no oversight',
+      'At SprintHive, I collaborated with senior product owners to analyze and optimize the currentecosystem, focusing on delivering data-driven improvements that enhanced usability andperformance. I led a project to streamline customer onboarding and identity verification processeson mobile devices, particularly in low-income, network-restricted areas, using analytical insights toimprove efficiency and accessibility.My contributions included cost analysis and identifying key areas to reduce expenses, which directlyalleviated user strain and improved profitability. Additionally, I provided business intelligence supportby training and upskilling business analysts on interpreting data and leveraging insights related toproduct offerings and enhancements.',
   },
   {
-    position: 'Intermediate Front End Developer',
+    position: 'Intermediate Front End Analyst Developer',
     companyName: 'Various - Freelance',
     location: {
       city: 'Pretoria',
@@ -185,19 +243,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
     startDate: 'Sep 2023',
     endDate: 'Apr 2024',
     responsibilities:
-      'As a front-end developer, I collaborated with clients to design and implement responsive, userfriendly web applications. Utilizing technologies such as HTML, CSS, and JavaScript, I transformed wireframes and prototypes into functional interfaces, ensuring optimal performance across devices. I focused on enhancing user experience and accessibility while adhering to best practices in code quality and version control.',
-  },
-  {
-    position: 'Intermediate Front End Developer',
-    companyName: 'The Builder Studios - Eli5',
-    location: {
-      city: 'Amsterdam',
-      country: 'Netherlands',
-    },
-    startDate: 'Jul 2023',
-    endDate: 'Aug 2023',
-    responsibilities:
-      'I collaborated closely with the design and back-end teams, to translate design concepts into interactive interfaces that met the highest standards of performance and aesthetics. My time at Eli5 empowered me to contribute to the digital landscape, driving innovation and excellence in front-end development. This experience further honed my skills in crafting compelling user interfaces and collaborating effectively in dynamic teams.',
+      'I leveraged Python, Power BI, and T-SQL to deliver data-driven solutions that supported strategic decision-making and improved business outcomes. I analyzed and transformed complex datasets, developed interactive Power BI dashboards, and optimized T-SQL queries to enhance database performance. I collaborated with clients to design and implement responsive, userfriendly web applications. Utilizing technologies such as HTML, CSS, and JavaScript, I transformed wireframes and prototypes into functional interfaces, ensuring optimal performance across devices. I focused on enhancing user experience and accessibility while adhering to best practices in code quality and version control. ',
   },
   {
     position: 'Intermediate Front End Developer',
@@ -223,27 +269,4 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
     responsibilities:
       'Developed various mobile and web applications for the company’s clientele and provided support to clients on solutions provided. Deployed the software tools, processes, and metrics. Automated the process of alerting developers of change requests and error logging using MS Power Automate. Originated the development of an application to make custom reporting easier for users than the current Microsoft SQL Server Reporting Services solution, using C# for processing, MS SQL Server for storage, and WebAPI services to generate the data used by the App.',
   },
-];
-
-export const WorkableCountries: string[] = [
-  'South Africa',
-  'Netherlands',
-  'USA',
-  'Canada',
-  'Sweden',
-  'Switzerland',
-  'UK',
-  'Norway',
-  'China',
-  'Denmark',
-  'EU',
-  'Finland',
-  'France',
-  'Germany',
-  'Greece',
-  'Hong Kong',
-  'Ireland',
-  'Japan',
-  'Poland',
-  'Thailand',
 ];
