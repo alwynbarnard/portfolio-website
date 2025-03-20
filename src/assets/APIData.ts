@@ -222,7 +222,7 @@ export const SkillsList: string[] = [
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
   {
-    position: 'Intermediate Front End Developer',
+    position: 'Software Engineer - Front End',
     companyName: 'SprintHive',
     location: {
       city: 'Johannesburg',
@@ -234,7 +234,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       'At SprintHive, I collaborated with senior product owners to analyze and optimize the currentecosystem, focusing on delivering data-driven improvements that enhanced usability andperformance. I led a project to streamline customer onboarding and identity verification processeson mobile devices, particularly in low-income, network-restricted areas, using analytical insights toimprove efficiency and accessibility.My contributions included cost analysis and identifying key areas to reduce expenses, which directlyalleviated user strain and improved profitability. Additionally, I provided business intelligence supportby training and upskilling business analysts on interpreting data and leveraging insights related toproduct offerings and enhancements.',
   },
   {
-    position: 'Intermediate Front End Analyst Developer',
+    position: 'BI & Data Analyst Developer',
     companyName: 'Various - Freelance',
     location: {
       city: 'Pretoria',
@@ -246,7 +246,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       'I leveraged Python, Power BI, and T-SQL to deliver data-driven solutions that supported strategic decision-making and improved business outcomes. I analyzed and transformed complex datasets, developed interactive Power BI dashboards, and optimized T-SQL queries to enhance database performance. I collaborated with clients to design and implement responsive, userfriendly web applications. Utilizing technologies such as HTML, CSS, and JavaScript, I transformed wireframes and prototypes into functional interfaces, ensuring optimal performance across devices. I focused on enhancing user experience and accessibility while adhering to best practices in code quality and version control. ',
   },
   {
-    position: 'Intermediate Front End Developer',
+    position: 'Software Engineer - Full Stack Front End',
     companyName: 'Raging River t/a Betway',
     location: {
       city: 'Pretoria',
@@ -258,7 +258,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       'Developed new features for Betway’s mobile and Desktop sites using VueJS with Vuetify and Nuxt and provided support and improvements to the current site using MVC, WebAPI and Bootstrap. Streamlined the process of tracking tasks using Azure DevOps and automated the process of alerting potential burnout. Spearheaded team interaction through daily check-ins and task updates. Managed events such as team building and testing events. Spearheaded code documentation and collaboration project which includes designs, wireframes, development documentation and feedback from a central location. Provided technical support and training for colleagues from various teams as well as new hires. Developed quality assurance protocols for various projects. Optimized existing systems to better meet client needs. Streamlined the maintenance and updating of existing and new systems.',
   },
   {
-    position: 'Junior Fullstack Software Developer',
+    position: 'Junior Software Engineer - Full Stack',
     companyName: 'Ke Concepts',
     location: {
       city: 'Johannesburg',
