@@ -222,7 +222,7 @@ export const SkillsList: string[] = [
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
   {
-    position: 'Software Engineer - Front End',
+    position: 'Software Engineer',
     companyName: 'SprintHive',
     location: {
       city: 'Johannesburg',
@@ -246,7 +246,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       'I leveraged Python, Power BI, and T-SQL to deliver data-driven solutions that supported strategic decision-making and improved business outcomes. I analyzed and transformed complex datasets, developed interactive Power BI dashboards, and optimized T-SQL queries to enhance database performance. I collaborated with clients to design and implement responsive, userfriendly web applications. Utilizing technologies such as HTML, CSS, and JavaScript, I transformed wireframes and prototypes into functional interfaces, ensuring optimal performance across devices. I focused on enhancing user experience and accessibility while adhering to best practices in code quality and version control. ',
   },
   {
-    position: 'Software Engineer - Full Stack Front End',
+    position: 'Software Engineer',
     companyName: 'Raging River t/a Betway',
     location: {
       city: 'Pretoria',
