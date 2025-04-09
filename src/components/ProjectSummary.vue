@@ -53,7 +53,7 @@ const goToProjects = (projectId: string) => {
   margin: 1rem;
 
   & img {
-    max-width: 40%;
+    max-width: 70%;
     max-height: 40%;
   }
 }
