@@ -3,12 +3,12 @@
     <div class="hero-inner">
       <h1 class="title">Hey, I'm Alwyn Barnard</h1>
       <h3 class="padded">
-        I'm a passionate and innovative Analyst Developer with a knack for
-        crafting exceptional webexperiences and software solutions. With a
-        strong foundation in React, Javascript, PowerBI, Python,and an array of
+        I'm a passionate and innovative BI Developer with a knack for crafting
+        exceptional web experiences and software solutions. With a strong
+        foundation in PowerBI, Python, SQL, PBI Report Builder and an array of
         other technologies, I bring a fresh perspective to every project I
         tackle. My expertise spans business intelligence development, data
-        analysis, web development, database management,UI/UX design, and more.
+        analysis, web development, database management, UI/UX design, and more.
       </h3>
       <a
         :href="
