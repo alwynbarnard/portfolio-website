@@ -230,12 +230,14 @@ export const SkillsList: string[] = [
   'PowerBI',
   'Python',
   'Power Apps',
+  'PowerBI Report Builder',
   'Azure DevOps',
   'SQL',
   'SQL Server',
   'SSMS',
   'SSRS',
   'SSIS',
+  'SSRS Report Builder',
   'ReactJS',
   'VueJS',
   'SEO & Optimization',
@@ -251,6 +253,18 @@ export const SkillsList: string[] = [
 
 export const WorkHistoryData: WorkHistoryCompanies[] = [
   {
+    position: 'Power BI Developer',
+    companyName: 'Medihelp',
+    location: {
+      city: 'Pretoria',
+      country: 'South Africa',
+    },
+    startDate: 'May 2025',
+    endDate: 'Present',
+    responsibilities:
+      'At Medihelp, I played a key role in empowering analysts by helping them sharpen their SQL and Power BI skills, enabling them to get more value out of their data. I also took the initiative to design and build an automated reporting solution using Power BI, SQL, and Report Builder, which gave Medihelp critical insights into the growth and retention of financial advisers and employer groups. This work was recognized with a Spot Award, highlighting the impact of the report on the business. Additionally, I developed a Power Apps solution to streamline the process of capturing and managing employee skills and competencies, which improved data accuracy and accessibility across the organization. My contributions helped enhance data-driven decision-making and operational efficiency at Medihelp.',
+  },
+  {
     position: 'Software Engineer',
     companyName: 'SprintHive',
     location: {
@@ -258,7 +272,7 @@ export const WorkHistoryData: WorkHistoryCompanies[] = [
       country: 'South Africa',
     },
     startDate: 'May 2024',
-    endDate: 'Present',
+    endDate: 'Nov 2024',
     responsibilities:
       'At SprintHive, I collaborated with senior product owners to analyze and optimize the currentecosystem, focusing on delivering data-driven improvements that enhanced usability andperformance. I led a project to streamline customer onboarding and identity verification processeson mobile devices, particularly in low-income, network-restricted areas, using analytical insights toimprove efficiency and accessibility.My contributions included cost analysis and identifying key areas to reduce expenses, which directlyalleviated user strain and improved profitability. Additionally, I provided business intelligence supportby training and upskilling business analysts on interpreting data and leveraging insights related toproduct offerings and enhancements.',
   },
